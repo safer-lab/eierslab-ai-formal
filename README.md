@@ -60,6 +60,44 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Content Management
+
+This site uses a **Markdown-based content management system**. All content (students, research areas, publications, news) is managed through Markdown files with YAML frontmatter in the `/content` folder.
+
+### Quick Start: Adding Content
+
+**No code changes needed!** Just add/edit Markdown files in the appropriate folder:
+
+- **PhD Students**: `content/students/phd/firstname-lastname.md`
+- **Research Areas**: `content/research/area-name.md`
+- **Publications**: `content/publications/paper-slug.md`
+- **News**: `content/news/news-slug.md`
+
+Each file has:
+1. **YAML frontmatter** (metadata at the top between `---`)
+2. **Markdown body** (rich content)
+
+See `content/README.md` for detailed documentation and examples.
+
+### Example: Adding a New PhD Student
+
+Create `content/students/phd/jane-doe.md`:
+
+```markdown
+---
+name: Jane Doe
+role: PhD Student
+research: Machine Learning Safety
+email: jdoe@stevens.edu
+photo: /images/students/jane.jpg
+order: 4
+---
+
+Jane's research focuses on safety verification of machine learning systems...
+```
+
+Save the file and it will automatically appear on the People page!
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/742b532b-db44-4d5e-abb0-375ba4567934) and click on Share -> Publish.
