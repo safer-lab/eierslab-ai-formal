@@ -4,23 +4,22 @@
 
 export const siteConfig = {
   // Lab name and tagline
-  labName: "Your Lab Name",
-  labTagline: "Your research focus in one line",
+  labName: "SAFER",
+  labTagline: "SAFER: The Lab for Symbolic AI, Federated Learning, Explainability, and Robustness",
 
   // Principal Investigator
   pi: {
-    name: "Principal Investigator Name",
+    name: "William Eiers",
     title: "Assistant Professor",
-    department: "Department Name",
-    university: "University Name",
-    email: "pi@university.edu",
-    website: "https://yourwebsite.com",
+    department: "Department of Computer Science",
+    university: "Stevens Institute of Technology",
+    email: "weiers@stevens.edu",
+    website: "https://william-eiers.github.io",
   },
 
   // Contact information
   contact: {
-    email: "lab@university.edu",
-    address: "Building Name, Room Number\nUniversity Name\nCity, State ZIP",
+    address: "Gateway North, GN-404\nStevens Institute of Technology\nHoboken, NJ 07030",
   },
 
   // Social links (leave empty "" if not applicable)
@@ -33,8 +32,8 @@ export const siteConfig = {
 
   // Homepage hero section
   hero: {
-    title: "Your Lab Name",
-    subtitle: "A brief description of your research focus and what makes your lab unique.",
+    title: "SAFER",
+    subtitle: "The Lab for Symbolic AI, Federated Learning, Explainability, and Robustness",
   },
 
   // Research highlights (3-4 main areas)
@@ -52,4 +51,9 @@ export const siteConfig = {
       description: "Brief description of this research area",
     },
   ],
+
+  // News configuration
+  news: {
+    rssUrl: "https://techcrunch.com/category/artificial-intelligence/feed/",
+  },
 };

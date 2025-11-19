@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
+import NewsSection from "@/components/NewsSection";
 
 const Home = () => {
   return (
@@ -81,28 +82,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Latest Updates - Minimal */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-light text-gray-900">News</h2>
-            <Link
-              to="/news"
-              className="text-gray-900 font-medium hover:underline"
-            >
-              View all →
-            </Link>
-          </div>
-          <div className="space-y-6">
-            <div className="border-l-2 border-gray-300 pl-6 py-2">
-              <p className="text-sm text-gray-500 mb-1">Date</p>
-              <p className="text-gray-900">
-                Add news items to content/news/ folder. They'll appear here automatically.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Latest Updates - Dynamic */}
+      <NewsSection />
     </div>
   );
 };
