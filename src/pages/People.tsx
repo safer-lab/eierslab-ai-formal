@@ -38,18 +38,29 @@ const People = () => {
               <div className="space-y-8">
                 {phdStudents.map((student) => (
                   <div key={student.slug} className="border-l-2 border-gray-200 pl-8">
-                    <h3 className="text-lg font-medium text-gray-900 mb-1">
-                      {student.metadata.name}
-                    </h3>
-                    <p className="text-gray-600 mb-3">{student.metadata.research}</p>
-                    {student.metadata.email && (
-                      <a
-                        href={`mailto:${student.metadata.email}`}
-                        className="text-gray-900 hover:underline text-sm"
-                      >
-                        {student.metadata.email}
-                      </a>
-                    )}
+                    <div className="flex gap-6 items-start">
+                      {student.metadata.photo && (
+                        <img
+                          src={student.metadata.photo}
+                          alt={student.metadata.name}
+                          className="w-24 h-24 rounded object-cover flex-shrink-0"
+                        />
+                      )}
+                      <div className="flex-1">
+                        <h3 className="text-lg font-medium text-gray-900 mb-1">
+                          {student.metadata.name}
+                        </h3>
+                        <p className="text-gray-600 mb-3">{student.metadata.research}</p>
+                        {student.metadata.email && (
+                          <a
+                            href={`mailto:${student.metadata.email}`}
+                            className="text-gray-900 hover:underline text-sm"
+                          >
+                            {student.metadata.email}
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

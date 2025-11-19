@@ -84,6 +84,56 @@ order: 1
 Details about the news item. Can include multiple paragraphs and **formatting**.
 ```
 
+## Adding Photos
+
+You have **three easy options** for adding photos:
+
+### Option 1: Use External URLs (Easiest)
+Just use a direct link to an image hosted elsewhere (e.g., your university website, LinkedIn, etc.):
+
+```markdown
+---
+name: Jane Doe
+photo: "https://example.com/photos/jane.jpg"
+---
+```
+
+### Option 2: Store Photos Locally (Recommended)
+1. Create folders: `public/images/people/`, `public/images/news/`, etc.
+2. Add your photos to the appropriate folder
+3. Reference them in markdown:
+
+```markdown
+---
+name: Jane Doe
+photo: "/images/people/jane-doe.jpg"
+---
+```
+
+**Example folder structure:**
+```
+public/
+└── images/
+    ├── people/          # Student and PI photos
+    │   ├── jane-doe.jpg
+    │   └── john-smith.jpg
+    ├── news/            # News-related images
+    └── research/        # Research illustrations
+```
+
+### Option 3: Use Placeholder Services (For Testing)
+Use services like unsplash for temporary photos:
+```markdown
+photo: "https://images.unsplash.com/photo-..."
+```
+
+### Photo Guidelines
+
+- **Format**: JPG or PNG
+- **Size**: 400x400px to 800x800px works well for profile photos
+- **File naming**: Use lowercase with hyphens (e.g., `jane-doe.jpg`)
+- **Keep files small**: Aim for under 500KB per photo
+
 ## Folder Structure
 
 ```
@@ -93,6 +143,12 @@ content/
 ├── students/
 │   └── phd/          # PhD student profiles
 └── news/             # News and updates
+
+public/
+└── images/           # Store your photos here
+    ├── people/       # Team photos
+    ├── news/         # News images
+    └── research/     # Research-related images
 ```
 
 ## Tips
