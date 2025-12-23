@@ -26,7 +26,7 @@ export const siteConfig = {
   social: {
     twitter: "",
     github: "",
-    scholar: "",
+    scholar: "https://scholar.google.com/citations?user=william-eiers",
     linkedin: "",
   },
 
@@ -39,16 +39,20 @@ export const siteConfig = {
   // Research highlights (3-4 main areas)
   highlights: [
     {
-      title: "Research Area 1",
-      description: "Brief description of this research area",
+      title: "Software Verification",
+      description: "Developing tools and approaches for automatically verifying software, particularly in compute clouds like AWS, GCP, and Azure.",
     },
     {
-      title: "Research Area 2",
-      description: "Brief description of this research area",
+      title: "Access Control Policy Analysis",
+      description: "Using quantitative techniques for verifying and repairing access control policies, including permissiveness analysis and policy repair.",
     },
     {
-      title: "Research Area 3",
-      description: "Brief description of this research area",
+      title: "Neural Network Verification",
+      description: "Quantitative robustness verification for neural networks, including symbolic analysis and model counting approaches.",
+    },
+    {
+      title: "Generative AI for Verification",
+      description: "Investigating how large language models can be used in software verification and software engineering tasks.",
     },
   ],
 

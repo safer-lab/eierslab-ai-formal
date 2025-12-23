@@ -26,6 +26,11 @@ const People = () => {
               >
                 {siteConfig.pi.email}
               </a>
+              {piData.length > 0 && (
+                <div className="mt-6 prose prose-gray max-w-none">
+                  <MarkdownRenderer content={piData[0].content} />
+                </div>
+              )}
             </div>
           </section>
 
