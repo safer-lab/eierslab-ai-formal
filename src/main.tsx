@@ -1,7 +1,3 @@
-// Polyfill Buffer for gray-matter in browser environment
-import { Buffer } from 'buffer';
-(window as any).Buffer = Buffer;
-
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
