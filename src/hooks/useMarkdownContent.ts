@@ -10,19 +10,19 @@ export function useMarkdownContent(contentPath: string) {
       setLoading(true);
       try {
         // Dynamically import all markdown files from the specified path
-        const modules = import.meta.glob('/content/**/*.md', { 
+        const modules = import.meta.glob('/content/**/*.md', {
           query: '?raw',
           import: 'default'
         });
-        
+
         // Filter modules by the content path
-        const filteredModules: Record<string, () => Promise<{ default: string }>> = {};
+        const filteredModules: Record<string, () => Promise<unknown>> = {};
         Object.keys(modules).forEach(key => {
           if (key.includes(contentPath)) {
             filteredModules[key] = modules[key] as () => Promise<{ default: string }>;
           }
         });
-        
+
         const loadedItems = await loadMarkdownContent(filteredModules);
         setItems(loadedItems);
       } catch (error) {

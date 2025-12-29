@@ -12,15 +12,18 @@ export interface ContentItem {
 
 // Helper to import all markdown files from a directory
 export async function loadMarkdownContent(
-  importGlob: Record<string, () => Promise<{ default: string }>>
+  importGlob: Record<string, () => Promise<unknown>>
 ): Promise<ContentItem[]> {
   const items: ContentItem[] = [];
 
   for (const [path, importFn] of Object.entries(importGlob)) {
-    const module = await importFn();
-    const markdown = module.default;
+    const rawContent = await importFn();
+    // Handle both cases: raw string or module with default export
+    const markdown = typeof rawContent === 'string'
+      ? rawContent
+      : (rawContent as { default: string }).default;
     const { data, content } = matter(markdown);
-    
+
     // Extract slug from path
     const slug = path
       .split('/')
