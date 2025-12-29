@@ -16,5 +16,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    // Polyfill Buffer for gray-matter in browser
+    global: 'globalThis',
+  },
   assetsInclude: ['**/*.md'],
 }));
